@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "test": "Nom indépendant, fond Kona et batterie active",
+      "result": "PASS"
+    },
+    {
+      "test": "20 flux et 20 textes personnalisés conservés",
+      "result": "PASS"
+    },
+    {
+      "test": "Éditeur avancé accessible et contexte popup disponible",
+      "result": "PASS"
+    },
+    {
+      "test": "Trois zones : 1800 W + 1,2 kW + 900 W = 3900 W",
+      "result": "PASS"
+    },
+    {
+      "test": "Batterie : charge, SOC et décharge",
+      "result": "PASS"
+    },
+    {
+      "test": "Réseau : export et import",
+      "result": "PASS"
+    },
+    {
+      "test": "Nuit : trois zones à zéro",
+      "result": "PASS"
+    },
+    {
+      "test": "Capteur indisponible : comportement hérité sans NaN",
+      "result": "PASS"
+    },
+    {
+      "test": "Énergie journalière normalisée",
+      "result": "PASS"
+    }
+  ],
+  "limitations": [
+    "Pas de test navigateur ni Home Assistant réel.",
+    "Caméras et services réels non testés."
+  ]
+}

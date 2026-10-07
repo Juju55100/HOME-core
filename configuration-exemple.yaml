@@ -1,0 +1,51 @@
+# Exemple à adapter : les identifiants sensor.* ci-dessous sont fictifs.
+# Copier ce contenu dans une carte manuelle de votre tableau de bord.
+type: custom:kona-energy-card
+language: fr
+card_title: MAISON
+image_style: real
+background_image: /local/community/kona-energy-card/kona-background.png
+display_unit: W
+animation_style: dots
+performance_mode: auto
+
+# TROIS ZONES SOLAIRES — puissance instantanée en W ou kW.
+# La somme de ces trois capteurs donne le total PV.
+# Ne pas ajouter sensor_pv_total sauf si vous souhaitez remplacer cette somme.
+sensor_pv1: sensor.pv_zone_1_power
+sensor_pv2: sensor.pv_zone_2_power
+sensor_pv3: sensor.pv_zone_3_power
+show_pv_strings: true
+pv_string_1_label: Zone 1
+pv_string_2_label: Zone 2
+pv_string_3_label: Zone 3
+# Production journalière TOTALE des trois zones, en Wh ou kWh.
+sensor_daily: sensor.pv_total_energie_journaliere
+
+# BATTERIE STATIONNAIRE — SOC en %, puissance positive en charge,
+# négative en décharge. Utiliser un capteur adapté à cette convention.
+battery_overlay_enabled: true
+battery_overlay_image: /local/community/kona-energy-card/battery_real.png
+battery_overlay_x: 227
+battery_overlay_y: 232
+battery_overlay_width: 140
+battery_overlay_height: 217
+battery_overlay_opacity: 1
+battery_power_mode: flow
+sensor_bat1_soc: sensor.batterie_soc
+sensor_bat1_power: sensor.batterie_puissance
+sensor_battery_flow: sensor.batterie_puissance
+
+# MAISON ET RÉSEAU — positif = import, négatif = export.
+sensor_home_load: sensor.maison_puissance
+sensor_grid_power: sensor.reseau_puissance
+invert_grid: false
+
+# HYUNDAI KONA — puissance de recharge et SOC de la voiture.
+car_label: KONA 2020
+sensor_car_power: sensor.kona_puissance_recharge
+sensor_car_soc: sensor.kona_soc
+
+# Les fonctions avancées locales sont disponibles dans l'éditeur.
+# Les activer selon les équipements réellement présents : caméras,
+# prévisions, personnes, images, flux, textes et fenêtres personnalisées.
